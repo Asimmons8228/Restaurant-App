@@ -112,6 +112,7 @@
             margin-bottom: 50px;
         }
         .meal{
+            max-width: 700px;
             width: 100%;
             // animation: moveUpandDown 1.5s linear infinite;
             position: relative;
@@ -124,5 +125,64 @@
         // //         bottom: 40px;
         // //     }
         // }
+    }
+}
+#information{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh;
+    .restaurant-image{
+        overflow: hidden;
+        height: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .info{
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2{
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .paragraphs{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-gap: 20px;
+            line-height: 1.7;
+            color: #525e66;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .about-link{
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            span{
+                margin-right: 20px;
+            }
+            .circle-right{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background: rgb(246, 247, 17);
+                background: radial-gradient(ellipse at center, rgba(246, 247, 17, 1) 0%, rgba(49, 143, 23, 1) 100%, rgba(252, 176, 69, 1) 100%);
+                .fa-chevron-right{
+                    color: white;
+                    font-size: 1.3rem;
+                }
+            }
+        }
     }
 }
