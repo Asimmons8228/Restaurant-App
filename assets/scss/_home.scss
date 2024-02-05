@@ -176,8 +176,7 @@
                 height: 40px;
                 width: 40px;
                 border-radius: 50%;
-                background: rgb(246, 247, 17);
-                background: radial-gradient(ellipse at center, rgba(246, 247, 17, 1) 0%, rgba(49, 143, 23, 1) 100%, rgba(252, 176, 69, 1) 100%);
+                background: rgba(49, 143, 23, 1);
                 .fa-chevron-right{
                     color: white;
                     font-size: 1.3rem;
@@ -185,4 +184,94 @@
             }
         }
     }
+}
+#food-preview{
+    background: #f4f8fb;
+    padding: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .button-rounded{
+        background: rgba(49, 143, 23, 1);
+        color: white;
+        display: inline-block;
+        padding: 15px;
+        border-radius: 30px;
+        margin: 0 auto;
+        margin-bottom: 150px;
+
+    }
+    .food-slider{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+
+        .slide{
+            width: 20%;
+            position: relative;
+            height: 550px;
+            cursor: pointer;
+            &:hover{
+                .background{
+                    background: rgba(170, 200, 52, 1);
+                    transform: translate3d(0, -100px, 0);
+                }
+                .content{
+                    .food-title{
+                        color: white;
+                    }
+                    .food-description{
+                        color: white;
+                    }
+                }
+            }
+            .background{
+                background: white;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                transition: transform .3s ease-in-out;
+            }
+            .food-image{
+                img{
+                    max-width: 200px;
+                    width: 95%;
+                }
+            }
+            .content{
+                position: absolute;
+                z-index: 2;
+                padding: 20px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: all .3s ease-in-out;
+                .food-title{
+                    font-size: 2rem;
+                    font-weight: 900;
+                    margin-bottom: 3rem;
+                    color: rgba(49, 143, 23, 1);
+                }
+                .food-description{
+                    font-size: .8rem;
+                    font-weight: 400;
+                    margin-bottom: 3rem;
+                    line-height: 1.8;
+                    color: #7a8d99;
+                }
+            }
+    }
+}
 }
